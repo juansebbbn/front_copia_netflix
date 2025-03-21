@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body class="bodylogin">
+    <div class="containerlogin_l">
+        <div class="form-box_l">
+            <h2>Netflix Inc</h2>
+            <div class="toggle-buttons_l">
+                <button id="loginBtn" class="active_l" onclick="showLogin()">Login</button>
+                <button id="registerBtn" class="inactive_l" onclick="showRegister()">Registrarse</button>
+            </div>
+
+            <form id="loginForm">
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button type="submit">
+                    <a href="index.html">Login</a>
+                </button>
+            </form>
+
+            <form id="registerForm" style="display: none;">
+                <input type="text" placeholder="Usuario" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/login/login.js"></script>
+</body>
+</html>
