@@ -9,33 +9,36 @@
 
 /*aspectos para los distintos bodys*/
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    overflow-y: auto;   
 }
 
-.bodylogin{
+.bodylogin {
     background: url('./imgs/login/fondo.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bodythemewhite{
-    background-color:  #e5e5e5;
+.bodythemewhite {
+    background-color: #e5e5e5;
 }
 
 
 /*temas*/
 
-.themedark{
+.themedark {
     background-color: rgb(13, 13, 13);
 }
 
-.themewhite{
+.themewhite {
     background-color: #DBDBDB;
 }
 
@@ -120,7 +123,7 @@ nav .navder img {
 .menu {
     position: absolute;
     top: 60px;
-    right: 0;
+    right: -13px;
     background: rgb(13, 13, 13);
     width: 220px;
     border-radius: 5px;
@@ -167,7 +170,7 @@ nav .navder img {
     border-top: 1px solid #444;
 }
 
-.menu a{
+.menu a {
     text-decoration: none;
     color: #DBDBDB;
 }
@@ -246,35 +249,35 @@ footer {
 
 /*menu lateral*/
 
-.opciones_cp{
+.opciones_cp {
     margin-left: 100px;
 }
 
-.opciones_cp div{
+.opciones_cp div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin: 20px;
 }
 
-.opciones_cp img{
-    width: 30px; 
+.opciones_cp img {
+    width: 30px;
     height: auto;
 }
 
-.opciones_cp a{
+.opciones_cp a {
     color: rgb(12, 12, 12);
     text-decoration: none;
     margin-left: 10px;
 }
 
-.opciones_cp span{
+.opciones_cp span {
     font-weight: bold;
 }
 
 /*visa*/
 
-.visa_cp{
+.visa_cp {
     border-bottom: 0.3px solid rgb(99, 99, 99);
     margin-bottom: 20px;
     margin-top: 10px;
@@ -283,7 +286,7 @@ footer {
     align-items: center;
 }
 
-.visa_cp img{
+.visa_cp img {
     width: 30px;
     height: auto;
     margin-right: 5px;
@@ -291,9 +294,9 @@ footer {
 
 /*footer*/
 
-.footercuenta_plan{
+.footercuenta_plan {
     margin-top: 300px;
-    border-top:  0.3px solid rgb(99, 99, 99);
+    border-top: 0.3px solid rgb(99, 99, 99);
 }
 
 
@@ -303,18 +306,20 @@ footer {
 /*peli fondo*/
 
 .promocion_h {
+    position: absolute;
+    top: 64px;
     width: 100vw;
     height: auto;
-    display: flex; 
+    display: flex;
     justify-content: center;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
-.promocion_h img{
+.promocion_h img {
     width: 100vw;
     height: 600px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 
@@ -323,7 +328,7 @@ footer {
 .starwarslogo_h {
     position: absolute;
     z-index: 2;
-    top: 190px;
+    top: 170px;
     left: 40px;
 }
 
@@ -332,13 +337,64 @@ footer {
     height: 270px;
 }
 
+/*generos*/
+
+.dropdown {
+    position: absolute;
+    left: 56px;
+}
+
+.dropdown-btn {
+    background-color:  rgb(13, 13, 13);
+    color: #dbdbdb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(13, 13, 13);
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    padding: 10px;
+    flex-direction: row;
+    gap: 20px;
+    top: 35px;
+    border-radius: 5px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content .column a {
+    color: white;
+    padding: 5px 0;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #E50914 ;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
 
 /* resumen */
 
 .resumen_h {
     position: absolute;
     z-index: 2;
-    top: 400px;
+    top: 380px;
     left: 55px;
     width: 600px;
 }
@@ -356,7 +412,7 @@ footer {
 .botones_h {
     position: absolute;
     z-index: 3;
-    top: 520px;
+    top: 495px;
     left: 55px;
     display: flex;
     gap: 15px;
@@ -374,6 +430,11 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 15px;
+}
+
+.reproducir_h a{
+    text-decoration: none;
+    font-size: 17px;
 }
 
 .botones_h button p {
@@ -424,7 +485,7 @@ footer {
 
 .seccioncards_h {
     position: absolute;
-    top: 585px;
+    top: 570px;
 }
 
 .seccioncards_h p {
@@ -454,7 +515,7 @@ footer {
     cursor: pointer;
 }
 
-.cardnormal_h  .peliculacard {
+.cardnormal_h .peliculacard {
     width: 100%;
     border-radius: 5px;
 }
@@ -468,7 +529,8 @@ footer {
 /* Tarjeta expandida */
 .hover-info {
     position: absolute;
-    top: -50px; /* Se ajusta para que no empuje otras tarjetas */
+    top: -50px;
+    /* Se ajusta para que no empuje otras tarjetas */
     left: -20px;
     width: 220px;
     background-color: rgb(27, 27, 27);
@@ -476,7 +538,8 @@ footer {
     border-radius: 10px;
     padding: 10px;
     display: none;
-    z-index: 100; /* Para que quede sobre otras tarjetas */
+    z-index: 100;
+    /* Para que quede sobre otras tarjetas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -486,18 +549,24 @@ footer {
     border-radius: 10px;
 }
 
-.opciones_h{
+.opciones_h {
     margin-top: 5px;
     display: flex;
     justify-content: space-around;
 }
 
-.opciones_h img{
-    width: 15px;
+.opciones_h img {
+    width: 17px;
     height: 20px;
 }
 
-.opciones_h span{
+.hover-info h2 {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.opciones_h span {
     width: 18px;
     height: 20px;
     border-radius: 50%;
@@ -507,7 +576,7 @@ footer {
     justify-content: center;
 }
 
-.opciones_h span img{
+.opciones_h span img {
     width: 10px;
     height: auto;
     margin-left: 2px;
@@ -523,25 +592,25 @@ footer {
     display: block;
 }
 
-.descripcion_a_h{
+.descripcion_a_h {
     display: flex;
     margin-top: 5px;
     justify-content: flex-start;
     align-items: center;
 }
 
-.descripcion_a_h img{
+.descripcion_a_h img {
     width: 13px;
     margin-top: 11px;
     margin-left: 6px;
     height: auto;
 }
 
-.generos{
+.generos {
     display: flex;
 }
 
-.hover-info p{
+.hover-info p {
     margin: 10px 5px 0px 5px;
     font-size: 10px;
 }
@@ -595,15 +664,26 @@ footer {
     transition: width 0.5s ease-in-out;
 }
 
+
+/* Botón de cierre */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
 /*footer*/
 
-.footerhome{
+.footerhome {
     position: absolute;
     top: 1400px;
 }
 
-.footerhome p{
-   color: #DBDBDB;
+.footerhome p {
+    color: #DBDBDB;
 }
 
 .footerhome .redes {
@@ -641,7 +721,7 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.form-box_l  h2 {
+.form-box_l h2 {
     margin-bottom: 15px;
     font-size: 22px;
     color: rgb(255, 255, 255);
@@ -733,7 +813,7 @@ footer {
 
 /*HTML 3: CUENTA*/
 
-.main_cuenta{
+.main_cuenta {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
@@ -743,19 +823,19 @@ footer {
 
 /*cuenta_c*/
 
-.cuenta_c{
+.cuenta_c {
     margin-right: 100px;
 }
 
-.cuenta_c h1{
+.cuenta_c h1 {
     margin: 10px 0px 10px 0px;
 }
 
-.cuenta_c h2{
+.cuenta_c h2 {
     margin: 10px 0px 10px 0px;
 }
 
-.infocuenta_c{
+.infocuenta_c {
     width: 520px;
     height: 200px;
     border-radius: 5px;
@@ -764,7 +844,7 @@ footer {
     background-color: #eaeaea;
 }
 
-.desde_c{
+.desde_c {
     background-color: red;
     width: 200px;
     height: 30px;
@@ -777,15 +857,15 @@ footer {
 
 /*vinculos*/
 
-.vinculos-container_c{
+.vinculos-container_c {
     margin-top: 30px;
 }
 
-.vinculos-container_c h2{
+.vinculos-container_c h2 {
     margin-bottom: 10px;
 }
 
-.vinculos_c{
+.vinculos_c {
     display: flex;
     flex-direction: column;
     width: 520px;
@@ -796,7 +876,7 @@ footer {
     background-color: #eaeaea;
 }
 
-.vinculos_c a{
+.vinculos_c a {
     text-decoration: none;
     color: rgb(12, 12, 12);
     border-bottom: 0.3px solid rgb(99, 99, 99);
@@ -804,46 +884,46 @@ footer {
     font-weight: bold;
 }
 
-.footercuenta_plan{
+.footercuenta_plan {
     margin-top: 300px;
-    border-top:  0.3px solid rgb(99, 99, 99);
+    border-top: 0.3px solid rgb(99, 99, 99);
 }
 
 /*HTML 4: PLANES*/
 
-.main_plan{
+.main_plan {
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin-top: 20px;
 }
 
-.main_plan a{
+.main_plan a {
     color: #222121;
 }
 
 
 /*planes*/
 
-.plancontainer_p h2{
+.plancontainer_p h2 {
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.plan_p{
+.plan_p {
     margin-right: 100px;
 }
 
-.plan_p h1{
+.plan_p h1 {
     margin: 10px 0px 10px 0px;
 }
 
-.plan_p h2{
+.plan_p h2 {
     margin: 10px 0px 10px 0px;
 }
 
-.infoplan_p{
+.infoplan_p {
     width: 520px;
     height: 290px;
     border-radius: 5px;
@@ -855,7 +935,7 @@ footer {
     padding: 20px;
 }
 
-.plan_p{
+.plan_p {
     display: flex;
     height: 40px;
     display: flex;
@@ -864,18 +944,18 @@ footer {
     border-bottom: 0.6px solid black;
 }
 
-.plan_p img{
+.plan_p img {
     height: 23px;
 }
 
-.plan_p p{
+.plan_p p {
     margin-top: 15px;
     text-decoration: underline;
     margin-bottom: 20px;
 }
 
 
-.planelegido_p h3{
+.planelegido_p h3 {
     text-decoration: underline;
     margin-bottom: 20px;
 }
@@ -883,7 +963,7 @@ footer {
 
 /*info pago*/
 
-.informaciondepago_p{
+.informaciondepago_p {
     width: 520px;
     height: 380px;
     display: flex;
@@ -893,10 +973,10 @@ footer {
     border: 0.3px solid rgb(99, 99, 99);
     padding: 20px;
     background-color: #eaeaea;
-    
+
 }
 
-.containerpago_p{
+.containerpago_p {
     display: flex;
     width: 480px;
     justify-content: space-between;
@@ -905,23 +985,123 @@ footer {
 }
 
 
-.containerpago_p img{
-    width: 30px; 
+.containerpago_p img {
+    width: 30px;
     height: auto;
 }
 
 
-.containerpago_p h2{
- font-size: 20px;
+.containerpago_p h2 {
+    font-size: 20px;
 }
 
 
-.containerpago_p p{
+.containerpago_p p {
     margin: 5px 0px 5px 0px;
 }
 
-.item_p{
+.item_p {
     padding: 25px 0px 25px 0px;
     border-bottom: 0.6px solid black;
 }
-   
+
+/*Pagina pelicula*/
+
+.paginpeliculamain{
+    position: relative;
+}
+
+.peliculaseleccionadacontainer{
+    width: 100vw;
+}
+
+.peliculaseleccionada{
+    width: 100%;
+    height: 450px;
+}
+
+.containerinfo{
+    margin-left: 50px;
+}
+
+.datos_pelicula{
+    color: #dbdbdb;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.ver_ahora{
+    width: 200px;
+    background-color: #dbdbdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.ver_ahora p{
+    margin-left: 8px;
+}
+
+.milista{
+    display: flex;
+    flex-direction: column;
+    color: #dbdbdb;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70px;
+    margin-top: 20px;
+}
+
+.milista img{
+    width: 30px;
+    height: auto;
+}
+
+.resumen_pelicula{
+    color: #DBDBDB;
+    width: 500px;
+    margin-top: 20px;
+}
+
+.recomendaciones {
+    color: #dbdbdb;
+    border-bottom: 0.3px solid rgb(255, 255, 255);   
+    margin: 15px 20px 0px 20px;
+}
+
+.recomedacionescontainer{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+    display: flex;
+    height: 300px;
+}
+
+.generos_elenco{
+    position: absolute;
+    top: 510px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    color: #dbdbdb;
+}
+
+.generos_elenco span{
+    font-weight: bold;
+}
+
+.fotologo{
+    position: absolute;
+    top: 195px;
+    left: 70px;
+}
+
+.imglogocontainer{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+
+
