@@ -5,7 +5,9 @@
     font-family: "Roboto", sans-serif;
 }
 
+
 /*esta seccion tiene aspectos compartidos entre archivos (no todos comparten todo)*/
+
 
 /*aspectos para los distintos bodys*/
 
@@ -16,8 +18,8 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
-    overflow-y: auto;   
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .bodylogin {
@@ -42,6 +44,7 @@ body {
     background-color: #DBDBDB;
 }
 
+
 /*nav*/
 
 nav {
@@ -53,6 +56,7 @@ nav {
 nav div {
     display: flex;
 }
+
 
 /*parte izquierda*/
 
@@ -245,7 +249,9 @@ footer {
     text-decoration: underline;
 }
 
+
 /*aspectos en comun cuenta y plan*/
+
 
 /*menu lateral*/
 
@@ -275,6 +281,7 @@ footer {
     font-weight: bold;
 }
 
+
 /*visa*/
 
 .visa_cp {
@@ -291,6 +298,7 @@ footer {
     height: auto;
     margin-right: 5px;
 }
+
 
 /*footer*/
 
@@ -337,6 +345,7 @@ footer {
     height: 270px;
 }
 
+
 /*generos*/
 
 .dropdown {
@@ -345,7 +354,7 @@ footer {
 }
 
 .dropdown-btn {
-    background-color:  rgb(13, 13, 13);
+    background-color: rgb(13, 13, 13);
     color: #dbdbdb;
     border: none;
     padding: 10px 20px;
@@ -381,7 +390,7 @@ footer {
 }
 
 .dropdown-content a:hover {
-    color: #E50914 ;
+    color: #E50914;
 }
 
 .dropdown:hover .dropdown-content {
@@ -432,7 +441,7 @@ footer {
     gap: 15px;
 }
 
-.reproducir_h a{
+.reproducir_h a {
     text-decoration: none;
     font-size: 17px;
 }
@@ -500,6 +509,7 @@ footer {
     left: 55px;
     margin-bottom: 40px;
     margin-top: 10px;
+    transition: transform 0.5s ease-in-out;
 }
 
 
@@ -515,6 +525,12 @@ footer {
     cursor: pointer;
 }
 
+.favcard{
+    position: absolute;
+    top: -14px;
+    right: 5px;
+}
+
 .cardnormal_h .peliculacard {
     width: 100%;
     border-radius: 5px;
@@ -526,11 +542,12 @@ footer {
     left: 4px;
 }
 
-/* Tarjeta expandida */
+
+/* tarjeta expandida */
+
 .hover-info {
     position: absolute;
     top: -50px;
-    /* Se ajusta para que no empuje otras tarjetas */
     left: -20px;
     width: 220px;
     background-color: rgb(27, 27, 27);
@@ -539,11 +556,9 @@ footer {
     padding: 10px;
     display: none;
     z-index: 100;
-    /* Para que quede sobre otras tarjetas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Imagen dentro de la tarjeta expandida */
 .hover-image {
     width: 100%;
     border-radius: 10px;
@@ -582,7 +597,6 @@ footer {
     margin-left: 2px;
 }
 
-/* Efecto de hover */
 .cardnormal_h:hover {
     transform: scale(1.3);
     z-index: 10;
@@ -665,7 +679,8 @@ footer {
 }
 
 
-/* Botón de cierre */
+/* botón de cierre */
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -811,6 +826,7 @@ footer {
     color: white
 }
 
+
 /*HTML 3: CUENTA*/
 
 .main_cuenta {
@@ -820,6 +836,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 
 /*cuenta_c*/
 
@@ -855,6 +872,7 @@ footer {
     border-bottom-right-radius: 20px;
 }
 
+
 /*vinculos*/
 
 .vinculos-container_c {
@@ -888,6 +906,7 @@ footer {
     margin-top: 300px;
     border-top: 0.3px solid rgb(99, 99, 99);
 }
+
 
 /*HTML 4: PLANES*/
 
@@ -1005,32 +1024,33 @@ footer {
     border-bottom: 0.6px solid black;
 }
 
-/*Pagina pelicula*/
 
-.paginpeliculamain{
+/*HTML 5: PAGINA PELICULA*/
+
+.paginpeliculamain {
     position: relative;
 }
 
-.peliculaseleccionadacontainer{
+.peliculaseleccionadacontainer {
     width: 100vw;
 }
 
-.peliculaseleccionada{
+.peliculaseleccionada {
     width: 100%;
     height: 450px;
 }
 
-.containerinfo{
+.containerinfo {
     margin-left: 50px;
 }
 
-.datos_pelicula{
+.datos_pelicula {
     color: #dbdbdb;
     margin-bottom: 20px;
     margin-top: 30px;
 }
 
-.ver_ahora{
+.ver_ahora {
     width: 200px;
     background-color: #dbdbdb;
     display: flex;
@@ -1040,11 +1060,11 @@ footer {
     border-radius: 8px;
 }
 
-.ver_ahora p{
+.ver_ahora p {
     margin-left: 8px;
 }
 
-.milista{
+.milista {
     display: flex;
     flex-direction: column;
     color: #dbdbdb;
@@ -1054,12 +1074,12 @@ footer {
     margin-top: 20px;
 }
 
-.milista img{
+.milista img {
     width: 30px;
     height: auto;
 }
 
-.resumen_pelicula{
+.resumen_pelicula {
     color: #DBDBDB;
     width: 500px;
     margin-top: 20px;
@@ -1067,11 +1087,11 @@ footer {
 
 .recomendaciones {
     color: #dbdbdb;
-    border-bottom: 0.3px solid rgb(255, 255, 255);   
+    border-bottom: 0.3px solid rgb(255, 255, 255);
     margin: 15px 20px 0px 20px;
 }
 
-.recomedacionescontainer{
+.recomedacionescontainer {
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 15px;
@@ -1079,7 +1099,7 @@ footer {
     height: 300px;
 }
 
-.generos_elenco{
+.generos_elenco {
     position: absolute;
     top: 510px;
     right: 60px;
@@ -1088,20 +1108,18 @@ footer {
     color: #dbdbdb;
 }
 
-.generos_elenco span{
+.generos_elenco span {
     font-weight: bold;
 }
 
-.fotologo{
+.fotologo {
     position: absolute;
     top: 195px;
     left: 70px;
 }
 
-.imglogocontainer{
+.imglogocontainer {
     position: absolute;
     top: 40px;
     left: 50px;
 }
-
-
